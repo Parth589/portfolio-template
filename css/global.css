@@ -1,0 +1,267 @@
+header,
+header * {
+  /* position: sticky; */
+  top: 0;
+  z-index: 2;
+}
+nav {
+  height: 100px;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 30px;
+}
+#nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-list-itms {
+  text-transform: capitalize;
+}
+body {
+  background-image: url('../media/mainBG.jpg');
+  background-size: cover;
+}
+section {
+  padding: 0 100px;
+  height: 100vh;
+  position: relative;
+}
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  height: calc(100vh - 100px);
+}
+.scroll {
+  position: absolute;
+  /* top: auto; */
+  bottom: 100px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  text-decoration: none;
+}
+.scroll-image {
+  width: 30px;
+}
+socialHandles {
+  display: flex;
+  gap: 1rem;
+}
+socialHandles > a:nth-child(1) {
+  filter: invert();
+}
+socialHandles > a > img {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  filter: grayscale() contrast(0.5);
+  border-radius: 100vmax;
+}
+
+#about {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 100px;
+  gap: 3rem;
+}
+profile-picture > img {
+  /* width: 20vw; */
+  height: 65vh;
+  clip-path: polygon(5% 5%, 100% 10%, 100% 90%, 5% 95%);
+  transform: rotateY(30deg);
+}
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 700px;
+}
+#download-cv-btn {
+  background-color: black;
+  padding: 10px 25px;
+  height: 58px;
+  box-sizing: border-box;
+}
+
+#skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  flex-wrap: wrap-reverse;
+}
+#skills > img {
+  height: clamp(200px, 500px, 65vh);
+  max-width: 50vw;
+  clip-path: polygon(0 10%, 95% 0%, 95% 100%, 0% 90%);
+  object-fit: contain;
+  transform: rotateY(-30deg);
+}
+skills {
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+skill-list {
+  display: flex;
+  max-width: 700px;
+  min-width: 450px;
+  flex-wrap: wrap;
+  gap: 1rem 4rem;
+  justify-content: center;
+}
+.circle-progress {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 100vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  /* background-color: #000000; */
+}
+.circle-progress > * {
+  z-index: 2;
+}
+.circle-progress::after {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(255, 0, 0, 0.082);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#works {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 3rem 100px 0 100px;
+}
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  overflow-y: scroll;
+  height: 70vh;
+  padding: 20px;
+}
+.project-card {
+  width: 80vw;
+  height: 80px;
+  background-color: #9b9bbb;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 100vmax 0 0 100vmax;
+  gap: 1rem;
+  outline: 2px solid black;
+}
+.project-card > a,
+.project-card > a > img {
+  height: 100%;
+}
+
+.has-tool-tip {
+  position: relative;
+}
+.has-tool-tip > description::before {
+  position: absolute;
+  width: 30%;
+  height: 20px;
+  background-color: red;
+  content: '';
+  top: -20px;
+  clip-path: polygon(50% 0%, 24% 100%, 77% 100%);
+}
+.has-tool-tip > description {
+  position: absolute;
+  height: max-content;
+  width: 500px;
+  background-color: red;
+  display: none;
+  top: 80px;
+  padding: 20px;
+  z-index: 3;
+}
+.has-tool-tip:hover description {
+  display: block;
+}
+
+#contact {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(circle at center center, #000000, #e5e5f7),
+    repeating-radial-gradient(
+      circle at center center,
+      #000000,
+      #000000,
+      10px,
+      transparent 20px,
+      transparent 10px
+    );
+  background-blend-mode: multiply;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.contact-card {
+  display: flex;
+  height: 80%;
+  width: 90%;
+  background-color: #e5e5f7;
+  padding: 25px;
+  gap: 1rem;
+  margin: auto;
+}
+.contact-quote {
+  width: 50vw;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact-form > input {
+  width: 400px;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+.contact-form > textarea {
+  resize: none;
+  width: 400px;
+  height: 200px;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+details {
+  position: relative;
+}

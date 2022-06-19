@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="nav-list" class="arial">
+                <li class="nav-list-itms small-font"><a href="#intro" class="link">home</a></li>
+                <li class="nav-list-itms small-font"><a href="#about" class="link">about</a></li>
+                <li class="nav-list-itms small-font"><a href="#skills" class="link">skills</a></li>
+                <li class="nav-list-itms small-font"><a href="#works" class="link"> works</a></li>
+                <li class="nav-list-itms small-font"><a href="#contact" class="link">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="intro">
+        <name class="x-big-font border-text impact">Athira</name>
+        <role class="small-font gill-sans">Engineer + junior front-end developer</role>
+        <socialHandles>
+            <a href="#">
+                <img src="media/twitter-logo.svg" alt="twitter">
+            </a>
+            <a href="#">
+                <img src="media/github-logo.svg" alt="github">
+            </a>
+            <a href="#">
+                <img src="media/linkedin-logo.svg" alt="linkedin">
+            </a>
+            <a href="#">
+                <img src="media/instagram-logo.svg" alt="instagram">
+            </a>
+        </socialHandles>
+        <a class="scroll x-small-font gill-sans" href="#about">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
+            <label for="scrollDown1">Scroll</label>
+        </a>
+    </section>
+    <section id="about">
+        <profile-picture>
+            <img src="media/profile-picture.jpg" alt="">
+        </profile-picture>
+        <div class="aboutMe arial">
+            <h3 class="med-font">About me</h3>
+            <about class="x-small-font para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi reprehenderit vel qui placeat ab
+                necessitatibus suscipit consequatur maiores atque, modi minus dicta eius? In cumque, deleniti
+                voluptatibus sapiente explicabo blanditiis.
+            </about>
+            <button class="uppercase" id="download-cv-btn">
+                <a href="media/fake CV.pdf" target="_blank" class="link x-small-font">download cv</a>
+            </button>
+        </div>
+        <a class="scroll x-small-font gill-sans" href="#skills">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
+            <label for="scrollDown1">Scroll</label>
+        </a>
+
+    </section>
+    <section id="skills">
+        <skills class="arial">
+            <h3 class="med-font">Skills</h3>
+            <skill-para class="x-small-font para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nesciunt reprehenderit voluptate ratione
+                perferendis, iusto omnis dolores ad libero provident architecto ipsa ullam qui, aspernatur tenetur
+                consequuntur? Libero, id voluptatibus.
+            </skill-para>
+            <skill-list class="small-font">
+                <li class="uppercase circle-progress">
+                    <span>html</span>
+                </li>
+                <li class="uppercase circle-progress">
+                    <span>css</span>
+                </li>
+                <li class="uppercase circle-progress"><span>js</span></li>
+                <li class="uppercase circle-progress"><span>c</span></li>
+                <li class="uppercase circle-progress"><span>c++</span></li>
+                <li class="uppercase circle-progress"><span>java</span></li>
+                <li class="uppercase circle-progress"><span>c#</span></li>
+            </skill-list>
+        </skills>
+        <img src="media/skills.jpg" alt="">
+        <a class="scroll x-small-font gill-sans" href="#works">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
+            <label for="scrollDown1">Scroll</label>
+        </a>
+    </section>
+    <section id="works" class="arial">
+        <h3 class="med-font">Works</h3>
+        <ul class="project-list">
+            <li class="small-font arial project-card">
+                <a href="#">
+                    <img src="media/github-logo.svg" alt="github-link">
+                </a>
+                <span>{Project onename}</span>
+                <span class="has-tool-tip">
+                    hover for Description
+                    <description> this is a short and informative description of this project.</description>
+                </span>
+                <span>{stars-count}</span>
+                <span>{contributers}</span>
+            </li>
+        </ul>
+        <a class="scroll x-small-font gill-sans" href="#contact">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
+            <label for="scrollDown1">Scroll</label>
+        </a>
+    </section>
+    <section id="contact">
+        <div class="contact-card" class="arial">
+            <div class="contact-quote big-font ">Drop me a line.
+                <br>
+                I would like to hear from you.
+            </div>
+            <div class="contact-form arial">
+                <h3 class="med-font">Get in Touch</h3>
+                <input type="text" name="name" id="name" placeholder="Enter your name" class="x-small-font">
+                <input type="email" name="name" id="name" placeholder="Enter your e-mail" class="x-small-font">
+                <textarea name="message" id="contact-messge" class="arial x-small-font"
+                    placeholder="Put a message for me"></textarea>
+            </div>
+        </div>
+        <a class="scroll x-small-font gill-sans" href="#footer">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
+            <label for="scrollDown1">Scroll</label>
+        </a>
+    </section>
+    <footer id="footer"></footer>
+</body>
+
+</html>
