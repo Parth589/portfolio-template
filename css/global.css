@@ -1,3 +1,12 @@
+:root {
+  --clr-primary-blue: #000c24;
+  --clr-white-text: #fbfbfb;
+  --clr-orange-text: #f44336;
+  --clr-secondary-grey: #928a97;
+}
+header {
+  width: 100%;
+}
 header,
 header * {
   /* position: sticky; */
@@ -24,6 +33,7 @@ body {
 }
 section {
   padding: 0 100px;
+  min-height: 100vh;
   height: 100vh;
   position: relative;
 }
@@ -32,7 +42,8 @@ section {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px) !important;
+  color: var(--clr-white-text);
 }
 .scroll {
   position: absolute;
@@ -41,8 +52,13 @@ section {
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: white;
+  color: var(--clr-white-text);
   text-decoration: none;
+  padding: 10px 15px;
+  background-color: var(--clr-primary-blue);
+  border-radius: 100vmax;
+  border: 2px solid var(--clr-white-text);
+  z-index: 3;
 }
 .scroll-image {
   width: 30px;
@@ -57,7 +73,7 @@ socialHandles > a:nth-child(1) {
 socialHandles > a > img {
   width: 50px;
   height: 50px;
-  background-color: white;
+  background-color: var(--clr-white-text);
   filter: grayscale() contrast(0.5);
   border-radius: 100vmax;
 }
@@ -66,8 +82,7 @@ socialHandles > a > img {
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 0 100px;
-  gap: 3rem;
+  gap: 150px;
 }
 profile-picture > img {
   /* width: 20vw; */
@@ -80,11 +95,11 @@ profile-picture > img {
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   max-width: 700px;
 }
-#download-cv-btn {
-  background-color: black;
+.btn {
+  background-color: var(--clr-primary-blue);
   padding: 10px 25px;
   height: 58px;
   box-sizing: border-box;
@@ -94,7 +109,6 @@ profile-picture > img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
   flex-wrap: wrap-reverse;
 }
 #skills > img {
@@ -115,13 +129,39 @@ skills {
 skill-list {
   display: flex;
   max-width: 700px;
-  min-width: 450px;
-  flex-wrap: wrap;
   gap: 1rem 4rem;
-  justify-content: center;
+  justify-content: start;
+  overflow: scroll;
+  position: relative;
+  padding: 5px 70px;
+  box-sizing: border-box;
+}
+.skill-scroll-btn {
+  position: absolute;
+  /* top: 50%; */
+  top: 25%;
+  border-radius: 100vmax;
+  z-index: 1;
+}
+.skill-scroll-btn > img {
+  background-color: var(--clr-white-text);
+}
+.skills-outer-list {
+  position: relative;
+}
+#skills-rightscroll {
+  /* display: none; */
+  /* left: 100%; */
+  right: 0px;
+}
+#skills-leftscroll {
+  /* display: none; */
+  left: 0px;
 }
 .circle-progress {
   border: 2px solid black;
+  min-width: 100px;
+  min-height: 100px;
   width: 100px;
   height: 100px;
   text-align: center;
@@ -130,9 +170,12 @@ skill-list {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden;
   /* background-color: #000000; */
+}
+.circle-progress:hover {
+  outline: 5px solid var(--clr-primary-blue);
 }
 .circle-progress > * {
   z-index: 2;
@@ -156,7 +199,7 @@ skill-list {
   justify-content: start;
   align-items: flex-start;
   gap: 3rem;
-  padding: 3rem 100px 0 100px;
+  padding-top: 3rem;
 }
 .project-list {
   display: flex;
@@ -169,14 +212,16 @@ skill-list {
 .project-card {
   width: 80vw;
   height: 80px;
-  background-color: #9b9bbb;
+  background-color: var(--clr-primary-blue);
   box-sizing: border-box;
   display: flex;
   justify-content: start;
   align-items: center;
   border-radius: 100vmax 0 0 100vmax;
   gap: 1rem;
-  outline: 2px solid black;
+  outline: 2px solid var(--clr-white-text);
+  border: 2px solid var(--clr-primary-blue);
+  color: var(--clr-white-text);
 }
 .project-card > a,
 .project-card > a > img {
@@ -190,7 +235,7 @@ skill-list {
   position: absolute;
   width: 30%;
   height: 20px;
-  background-color: red;
+  background-color: var(--clr-secondary-grey);
   content: '';
   top: -20px;
   clip-path: polygon(50% 0%, 24% 100%, 77% 100%);
@@ -199,7 +244,7 @@ skill-list {
   position: absolute;
   height: max-content;
   width: 500px;
-  background-color: red;
+  background-color: var(--clr-secondary-grey);
   display: none;
   top: 80px;
   padding: 20px;
@@ -225,18 +270,22 @@ skill-list {
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  min-height: 100vh;
+  height: auto;
 }
 .contact-card {
   display: flex;
-  height: 80%;
+  min-height: 80%;
   width: 90%;
-  background-color: #e5e5f7;
+  background-color: var(--clr-white-text);
   padding: 25px;
   gap: 1rem;
+  flex-wrap: wrap;
   margin: auto;
 }
 .contact-quote {
   width: 50vw;
+  min-width: 210px;
   height: 100%;
   box-sizing: border-box;
   display: flex;

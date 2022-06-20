@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/desktop.css">
     <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -43,9 +44,9 @@
                 <img src="media/instagram-logo.svg" alt="instagram">
             </a>
         </socialHandles>
-        <a class="scroll x-small-font gill-sans" href="#about">
+        <a class="pointer scroll x-small-font gill-sans" href="#about">
             <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
-            <label for="scrollDown1">Scroll</label>
+            <label for="scrollDown1" class="pointer">Scroll</label>
         </a>
     </section>
     <section id="about">
@@ -54,55 +55,61 @@
         </profile-picture>
         <div class="aboutMe arial">
             <h3 class="med-font">About me</h3>
-            <about class="x-small-font para">
+            <about class="small-font para">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi reprehenderit vel qui placeat ab
                 necessitatibus suscipit consequatur maiores atque, modi minus dicta eius? In cumque, deleniti
                 voluptatibus sapiente explicabo blanditiis.
             </about>
-            <button class="uppercase" id="download-cv-btn">
+            <button class="uppercase btn" id="download-cv-btn">
                 <a href="media/fake CV.pdf" target="_blank" class="link x-small-font">download cv</a>
             </button>
         </div>
-        <a class="scroll x-small-font gill-sans" href="#skills">
-            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
-            <label for="scrollDown1">Scroll</label>
+        <a class="pointer scroll x-small-font gill-sans" href="#skills">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown2" class="scroll-image filter" href="#about">
+            <label for="scrollDown2" class="pointer">Scroll</label>
         </a>
 
     </section>
     <section id="skills">
         <skills class="arial">
             <h3 class="med-font">Skills</h3>
-            <skill-para class="x-small-font para">
+            <skill-para class="small-font para">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nesciunt reprehenderit voluptate ratione
                 perferendis, iusto omnis dolores ad libero provident architecto ipsa ullam qui, aspernatur tenetur
                 consequuntur? Libero, id voluptatibus.
             </skill-para>
-            <skill-list class="small-font">
-                <li class="uppercase circle-progress">
-                    <span>html</span>
-                </li>
-                <li class="uppercase circle-progress">
-                    <span>css</span>
-                </li>
-                <li class="uppercase circle-progress"><span>js</span></li>
-                <li class="uppercase circle-progress"><span>c</span></li>
-                <li class="uppercase circle-progress"><span>c++</span></li>
-                <li class="uppercase circle-progress"><span>java</span></li>
-                <li class="uppercase circle-progress"><span>c#</span></li>
-            </skill-list>
+            <div class="skills-outer-list">
+                <button id="skills-leftscroll" class="skill-scroll-btn btn pointer"><img
+                        src="media/arrow-left-circle-fill.svg" alt="" class="filter"></button>
+                <skill-list class="small-font hide-scrollbar">
+                    <li class="uppercase circle-progress ">
+                        <span>html</span>
+                    </li>
+                    <li class="uppercase circle-progress ">
+                        <span>css</span>
+                    </li>
+                    <li class="uppercase circle-progress "><span>js</span></li>
+                    <li class="uppercase circle-progress "><span>c</span></li>
+                    <li class="uppercase circle-progress "><span>c++</span></li>
+                    <li class="uppercase circle-progress "><span>java</span></li>
+                    <li class="uppercase circle-progress "><span>c#</span></li>
+                </skill-list>
+                <button id="skills-rightscroll" class="skill-scroll-btn btn pointer"><img
+                        src="media/arrow-right-circle-fill.svg" alt="" class="filter"></button>
+            </div>
         </skills>
         <img src="media/skills.jpg" alt="">
-        <a class="scroll x-small-font gill-sans" href="#works">
-            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
-            <label for="scrollDown1">Scroll</label>
+        <a class="pointer scroll x-small-font gill-sans" href="#works">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown3" class="scroll-image filter" href="#about">
+            <label for="scrollDown3" class="pointer">Scroll</label>
         </a>
     </section>
     <section id="works" class="arial">
         <h3 class="med-font">Works</h3>
-        <ul class="project-list">
-            <li class="small-font arial project-card">
-                <a href="#">
-                    <img src="media/github-logo.svg" alt="github-link">
+        <ul class="project-list hide-scrollbar">
+            <li class="small-font arial project-card ">
+                <a href="#" class=" hide-scrollbar">
+                    <img src="media/github-logo.svg" alt="github-link" class="filter">
                 </a>
                 <span>{Project onename}</span>
                 <span class="has-tool-tip">
@@ -113,9 +120,9 @@
                 <span>{contributers}</span>
             </li>
         </ul>
-        <a class="scroll x-small-font gill-sans" href="#contact">
-            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
-            <label for="scrollDown1">Scroll</label>
+        <a class="pointer scroll x-small-font gill-sans" href="#contact">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown4" class="scroll-image filter" href="#about">
+            <label for="scrollDown4" class="pointer">Scroll</label>
         </a>
     </section>
     <section id="contact">
@@ -130,11 +137,14 @@
                 <input type="email" name="name" id="name" placeholder="Enter your e-mail" class="x-small-font">
                 <textarea name="message" id="contact-messge" class="arial x-small-font"
                     placeholder="Put a message for me"></textarea>
+                <button class="uppercase btn pointer" id="send-message-btn">
+                    <span class="link x-small-font ">send message</span>
+                </button>
             </div>
         </div>
-        <a class="scroll x-small-font gill-sans" href="#footer">
-            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown1" class="scroll-image filter" href="#about">
-            <label for="scrollDown1">Scroll</label>
+        <a class="pointer scroll x-small-font gill-sans" href="#footer">
+            <img src="media/arrow-down-circle.svg" alt="" id="scrollDown5" class="scroll-image filter" href="#about">
+            <label for="scrollDown5" class="pointer">Scroll</label>
         </a>
     </section>
     <footer id="footer"></footer>

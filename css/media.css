@@ -1,0 +1,111 @@
+@media screen and (max-width: 1590px) {
+  #contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .contact-card {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1285px) {
+  #skills > img {
+    display: none;
+  }
+  .project-list {
+    flex-direction: row;
+    gap: 3rem;
+    overflow-y: scroll;
+    height: 70vh;
+    padding: 20px;
+    width: 85vw;
+  }
+  .project-card {
+    max-width: 300px;
+    width: auto;
+    height: 350px;
+    border-radius: 10vmax;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .project-card > a,
+  .project-card > a > img {
+    height: 100%;
+    width: 50px;
+    overflow-x: hidden;
+
+    height: 50px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #about {
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  section {
+    padding: 0 3rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  about {
+    max-height: 55vh;
+    overflow: scroll;
+  }
+  profile-picture > img {
+    border-radius: 10vmax;
+    clip-path: none;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 780px) {
+  section {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  skill-para,
+  skill-list {
+    width: 80vw;
+  }
+  .scroll {
+    display: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .nav-list-itms {
+    font-size: 1.5rem;
+  }
+  #skills {
+    height: 115vh;
+  }
+  .contact-form > input,
+  .contact-form > textarea {
+    width: 70vw;
+  }
+}
+@media screen and (max-width: 492px) {
+  #about {
+    flex-wrap: wrap;
+    padding-top: 50px;
+    box-sizing: border-box;
+    height: 115vh;
+  }
+  profile-picture > img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+@media screen and (max-width: 465px) {
+  #about,
+  #skills {
+    height: 130vh;
+  }
+  .contact-card {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+  }
+}
