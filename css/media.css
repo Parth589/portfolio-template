@@ -17,16 +17,22 @@
     overflow-y: scroll;
     height: 70vh;
     padding: 20px;
+    padding-right: 250px;
     width: 85vw;
+    flex: 1;
+    flex-shrink: 1;
+    flex-grow: 1;
   }
   .project-card {
-    max-width: 300px;
-    width: auto;
+    /* max-width: 300px; */
+    min-width: 400px;
     height: 350px;
     border-radius: 10vmax;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 10px;
+    gap: 1rem;
   }
   .project-card > a,
   .project-card > a > img {

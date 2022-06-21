@@ -10,16 +10,14 @@
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/desktop.css">
-    <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
-    <header>
+    <header id="heading">
         <nav>
             <ul id="nav-list" class="arial">
-                <li class="nav-list-itms small-font"><a href="#intro" class="link">home</a></li>
+                <li class="nav-list-itms small-font"><a href="#heading" class="link">home</a></li>
                 <li class="nav-list-itms small-font"><a href="#about" class="link">about</a></li>
                 <li class="nav-list-itms small-font"><a href="#skills" class="link">skills</a></li>
                 <li class="nav-list-itms small-font"><a href="#works" class="link"> works</a></li>
@@ -82,17 +80,7 @@
                 <button id="skills-leftscroll" class="skill-scroll-btn btn pointer"><img
                         src="media/arrow-left-circle-fill.svg" alt="" class="filter"></button>
                 <skill-list class="small-font hide-scrollbar">
-                    <li class="uppercase circle-progress ">
-                        <span>html</span>
-                    </li>
-                    <li class="uppercase circle-progress ">
-                        <span>css</span>
-                    </li>
-                    <li class="uppercase circle-progress "><span>js</span></li>
-                    <li class="uppercase circle-progress "><span>c</span></li>
-                    <li class="uppercase circle-progress "><span>c++</span></li>
-                    <li class="uppercase circle-progress "><span>java</span></li>
-                    <li class="uppercase circle-progress "><span>c#</span></li>
+
                 </skill-list>
                 <button id="skills-rightscroll" class="skill-scroll-btn btn pointer"><img
                         src="media/arrow-right-circle-fill.svg" alt="" class="filter"></button>
@@ -107,18 +95,7 @@
     <section id="works" class="arial">
         <h3 class="med-font">Works</h3>
         <ul class="project-list hide-scrollbar">
-            <li class="small-font arial project-card ">
-                <a href="#" class=" hide-scrollbar">
-                    <img src="media/github-logo.svg" alt="github-link" class="filter">
-                </a>
-                <span>{Project onename}</span>
-                <span class="has-tool-tip">
-                    hover for Description
-                    <description> this is a short and informative description of this project.</description>
-                </span>
-                <span>{stars-count}</span>
-                <span>{contributers}</span>
-            </li>
+
         </ul>
         <a class="pointer scroll x-small-font gill-sans" href="#contact">
             <img src="media/arrow-down-circle.svg" alt="" id="scrollDown4" class="scroll-image filter" href="#about">
@@ -133,9 +110,9 @@
             </div>
             <div class="contact-form arial">
                 <h3 class="med-font">Get in Touch</h3>
-                <input type="text" name="name" id="name" placeholder="Enter your name" class="x-small-font">
-                <input type="email" name="name" id="name" placeholder="Enter your e-mail" class="x-small-font">
-                <textarea name="message" id="contact-messge" class="arial x-small-font"
+                <input type="text" name="name" id="contact-name" placeholder="Enter your name" class="x-small-font">
+                <input type="email" name="name" id="contact-mail" placeholder="Enter your e-mail" class="x-small-font">
+                <textarea name="message" id="contact-message" class="arial x-small-font"
                     placeholder="Put a message for me"></textarea>
                 <button class="uppercase btn pointer" id="send-message-btn">
                     <span class="link x-small-font ">send message</span>
@@ -149,5 +126,6 @@
     </section>
     <footer id="footer"></footer>
 </body>
+<script src="js/main.js"></script>
 
 </html>
