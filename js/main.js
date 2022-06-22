@@ -54,6 +54,9 @@ function setSkiils(data) {
             <li class="uppercase circle-progress" id="${element.name}">
                 <span>${element.name}</span>
             </li>`;
+        if (element.name.length > 4) {
+
+        }
     });
     setHtml("skill-list", finalHtml);
     data.forEach(element => {
@@ -72,7 +75,7 @@ function setHorizontalScroll(container, leftBtnID, rightBtnID) {
         lft.addEventListener("click", () => {
             let i = 0;
             let id = setInterval(() => {
-                cont.scrollLeft -= 20;
+                cont.scrollLeft -= 30;
                 i++;
                 if (i == 5) {
                     clearInterval(id);
@@ -87,7 +90,7 @@ function setHorizontalScroll(container, leftBtnID, rightBtnID) {
         rit.addEventListener("click", () => {
             let i = 0;
             let id = setInterval(() => {
-                cont.scrollLeft += 20;
+                cont.scrollLeft += 30;
                 i++;
                 if (i == 5) {
                     clearInterval(id);
@@ -98,7 +101,7 @@ function setHorizontalScroll(container, leftBtnID, rightBtnID) {
     else console.error("right button not found");
 
 }
-function getProjectList(username) {
+function getProjectList(username, filterArray) {
     let finalHtml = "";
     fetch(`https://api.github.com/users/${username}/repos`).then(response => {
         response.json().then(data => {
@@ -111,6 +114,15 @@ function getProjectList(username) {
                     languages: [],
                     url: element["html_url"]
                 };
+                let is_excluded = false;
+                filterArray.forEach(element => {
+                    if (obj.name === element) {
+                        is_excluded = true;
+                    }
+                });
+                if (is_excluded == true) {
+                    return;
+                }
                 if (element.description === null) {
                     obj.description = "No description provided by owner.";
                 }
@@ -125,7 +137,7 @@ function getProjectList(username) {
                         }
                         finalHtml = `
                     <li class="small-font arial project-card ">
-                        <a href="${obj.url}" class=" hide-scrollbar">
+                        <a href="${obj.url}" class=" hide-scrollbar" target="_blank">
                             <img src="media/github-logo.svg" alt="github-link" class="filter">
                         </a>
                         <span>${obj.name}</span>
@@ -178,16 +190,8 @@ function validateAndSend() {
                     msg: msg
                 };
                 //! here put your server url which supports the post request
-                fetch("https://jsonplaceholder.typicode.com/posts", {
-                    method: "POST",
-                    body: JSON.stringify(obj),
-                    headers: {
-                        "Content-type": "application/json; charset=UTF-8"
-                    }
-                }).then(response => response.json())
-                    .then(json => {
-                        console.log(json);
-                    });
+                document.getElementById("send-message-btn").href += `name:${obj.name}%0D%0Acontact-mail:${obj.email}%0D%0Amessage:${obj.msg}`;
+                console.log(document.getElementById("send-message-btn").href);
                 resetContactForm();
                 return true;
             }
@@ -231,8 +235,12 @@ let start = () => {
             // set skills with their percentage
             setSkiils(data["skills"]);
             setHorizontalScroll("skill-list", "skills-leftscroll", "skills-rightscroll");
-            getProjectList(data["github-username"]);
+            getProjectList(data["github-username"], data["works-filter"]);
             let sendMsgBtn = document.getElementById("send-message-btn");
+            if (sendMsgBtn !== null) {
+                sendMsgBtn.href = `mailto:${data["message-email"]}?subject=Testing out mailto!&body=`;
+                console.log(sendMsgBtn.href);
+            }
             if (sendMsgBtn !== null) {
                 sendMsgBtn.addEventListener("click", () => {
                     let i = validateAndSend();

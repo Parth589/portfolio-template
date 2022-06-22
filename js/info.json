@@ -1,11 +1,11 @@
 {
-    "name": "urvi",
-    "role": "full-stack developer",
+    "name": "Urvi",
+    "role": "full-stack developer + Devops Engineer",
     "github-username": "Parth589",
     "github-handle": "https://github.com/Parth589",
-    "twitter-handle": "https://github.com/Parth589",
+    "twitter-handle": "https://twitter.com/elonmusk",
     "linkedin-handle": "https://github.com/Parth589",
-    "instagram-handle": "https://github.com/Parth589",
+    "instagram-handle": "https://www.instagram.com/p4rth_6969/",
     "profile-picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80",
     "cv-link": "https://www.docdroid.net/WyjIuyO/fake-resume-pdf",
     "about-yourself": "about Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi reprehenderit vel qui placeat ab necessitatibus suscipit consequatur maiores atque, modi minus dicta eius? In cumque, deleniti voluptatibus sapiente explicabo blanditiis.",
@@ -28,10 +28,20 @@
             "amount": 80
         },
         {
+            "name": "c++",
+            "amount": 80
+        },
+        {
             "name": "java",
             "amount": 70
+        },
+        {
+            "name": "c#",
+            "amount": 40
         }
     ],
-    "works": [],
+    "works-filter": [
+        "projects named this string will be excluded while showing"
+    ],
     "message-email": "parthparmar4507@gmail.com"
 }
