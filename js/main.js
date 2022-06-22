@@ -222,6 +222,7 @@ let start = () => {
     fetch("js/info.json").then((res) => {
         res.json().then((data) => {
             //the json object is fetched and available as the variable data
+            document.title = "Portfolio | " + data.name;
             setHtml("name", data.name);
             setHtml("role", data.role);
             setHref("socialHandles :nth-child(1)", data["twitter-handle"]);
