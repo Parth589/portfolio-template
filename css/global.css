@@ -87,6 +87,10 @@ section {
 
 .scroll-image {
     width: 30px;
+    background-color: var(--clr-white-text);
+    outline: 2px solid var(--clr-white-text);
+    /* filter: none; */
+    border-radius: 100vmax;
 }
 
 socialHandles {
@@ -137,6 +141,7 @@ profile-picture>img {
     padding: 10px 25px;
     height: 58px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 #skills {
@@ -176,10 +181,12 @@ skill-list {
 
 .skill-scroll-btn {
     position: absolute;
-    /* top: 50%; */
-    top: 25%;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 100vmax;
     z-index: 4;
+    display: flex;
+    align-items: center;
 }
 
 .skill-scroll-btn>img {

@@ -1,74 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&display=swap');
+
 /* css reset */
 * {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  border: none;
-  outline: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: none;
+    outline: none;
 }
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 .link {
-  text-decoration: none;
-  color: rgb(198, 198, 198);
+    text-decoration: none;
+    filter: grayscale(.5);
+    color: rgb(98, 98, 98);
+}
+
+.link-active {
+    text-decoration: none;
+    filter: none;
+    color: var(--clr-orange-text);
 }
 
 .x-big-font {
-  font-size: 65px;
+    font-size: 65px;
 }
+
 .big-font {
-  font-size: 42px;
+    font-size: 42px;
 }
+
 .med-font {
-  font-size: 38px;
+    font-size: 38px;
 }
+
 .small-font {
-  font-size: 30px;
+    font-size: 30px;
 }
+
 .x-small-font {
-  font-size: 20px;
+    font-size: 20px;
 }
+
 .arial {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 .border-text {
-  width: fit-content;
-  border-bottom: 2px solid white;
+    width: fit-content;
+    border-bottom: 2px solid white;
 }
+
 .gill-sans {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .impact {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 .filter {
-  filter: invert();
+    filter: invert();
 }
+
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
+
 .lowercase {
-  text-transform: lowercase;
+    text-transform: lowercase;
 }
+
 .para {
-  word-spacing: 7px;
-  line-height: 38px;
-  /* font-family: 'Barlow Condensed', sans-serif; */
-  font-family: 'League Spartan', sans-serif;
-  /* font-weight: 600; */
+    word-spacing: 7px;
+    line-height: 38px;
+    /* font-family: 'Barlow Condensed', sans-serif; */
+    font-family: 'League Spartan', sans-serif;
+    /* font-weight: 600; */
 }
+
 .pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }

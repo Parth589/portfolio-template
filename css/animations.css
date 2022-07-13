@@ -1,47 +1,55 @@
 :root {
-  --clr-primary-blue: #000c24;
-  --clr-white-text: #fbfbfb;
-  --clr-orange-text: #f44336;
-  --clr-secondary-grey: #928a97;
+    --clr-primary-blue: #000c24;
+    --clr-white-text: #fbfbfb;
+    --clr-orange-text: #f44336;
+    --clr-secondary-grey: #928a97;
 }
+
 @keyframes up-down {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(60px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
+
 @keyframes big-small {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.2, 1.2);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
+
 @keyframes rotate-diagonal {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  50% {
-    transform: rotateY(180deg) rotateX(180deg);
-  }
-  100% {
-    transform: rotateY(360deg) rotateX(360deg);
-  }
+    0% {
+        color: rgb(95, 95, 95);
+    }
+
+
+    100% {
+        color: rgb(198, 198, 198);
+    }
 }
+
 @keyframes rotate-z {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
