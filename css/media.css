@@ -64,7 +64,9 @@
 @media screen and (max-width: 850px) {
     about {
         max-height: 55vh;
-        overflow: scroll;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
     }
 
     profile-picture>img {
@@ -133,5 +135,34 @@
         justify-content: center;
         align-items: center;
         padding: 10px 25px;
+    }
+}
+
+/* menu */
+@media screen and (max-width:480px) {
+    nav>button {
+        display: block;
+        width: 100px;
+        min-height: 50px;
+        height: 50px;
+        align-self: flex-end;
+        border-radius: 10px;
+        background-color: lime;
+        margin: 10px 0;
+    }
+
+    #nav-list {
+        display: none;
+        animation: fold-up 1s 1 forwards;
+    }
+
+    #nav-list[visible=""] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* min-height: 80vh; */
+        background-color: lime;
+        border-radius: 0 0 30px 30px;
+        animation: fold-down 1s 1 forwards;
     }
 }

@@ -269,5 +269,12 @@ let start = () => {
                 console.error("cant find the send message button!");
         });
     });
+    //set foldable menu
+    let trigger = document.getElementById("menu-trigger");
+    trigger.addEventListener("click", () => {
+        let list = document.getElementById("nav-list");
+        list.toggleAttribute("visible");
+        trigger.toggleAttribute("rotate-full");
+    });
 };
 window.addEventListener("load", start);

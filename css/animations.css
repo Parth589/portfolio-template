@@ -53,3 +53,33 @@
         transform: rotateZ(360deg);
     }
 }
+
+@keyframes fold-up {
+    0% {
+        height: 60vh;
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes fold-down {
+    0% {
+        min-height: 0;
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 1;
+    }
+
+    100% {
+        min-height: 60vh;
+    }
+}

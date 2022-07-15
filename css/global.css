@@ -21,6 +21,12 @@ nav {
     background-color: transparent;
     box-sizing: border-box;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav>button {
+    display: none;
 }
 
 #nav-list {
@@ -311,6 +317,7 @@ skill-list {
     border-radius: 10px;
 }
 
+.has-tool-tip:active description,
 .has-tool-tip:hover description {
     display: block;
 }
