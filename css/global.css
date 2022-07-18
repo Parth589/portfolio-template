@@ -41,9 +41,11 @@ nav>button {
     padding: 10px;
 }
 
-.rotatediagonal:hover div {
-    animation: rotate-diagonal 1s 1 forwards;
+.nav-list-itms>* {
+    color: var(--clr-secondary-grey);
 }
+
+
 
 body {
     background-image: url('../media/mainBG.jpg');
@@ -277,7 +279,7 @@ skill-list {
     display: flex;
     justify-content: start;
     align-items: center;
-    border-radius: 100vmax 0 0 100vmax;
+    border-radius: 100vmax;
     gap: 4rem;
     outline: 2px solid var(--clr-white-text);
     border: 2px solid var(--clr-primary-blue);
@@ -315,6 +317,7 @@ skill-list {
     z-index: 3;
     outline: 2px solid var(--clr-primary-blue);
     border-radius: 10px;
+    box-shadow: 0px 5px 10px black;
 }
 
 .has-tool-tip:active description,

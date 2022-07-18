@@ -33,14 +33,14 @@
     }
 }
 
-@keyframes rotate-diagonal {
+@keyframes nav-link-animation {
     0% {
-        color: rgb(95, 95, 95);
+        width: 0;
     }
 
 
     100% {
-        color: rgb(198, 198, 198);
+        width: 100%;
     }
 }
 
@@ -82,4 +82,26 @@
     100% {
         min-height: 60vh;
     }
+}
+
+.nav-link-animation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link-animation:hover::after {
+    animation: nav-link-animation 1s 1;
+}
+
+.nav-link-animation::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 100vmax;
+    background-color: var(--clr-white-text);
+    z-index: -1;
+    /* border-bottom: 2px solid #000c24; */
 }

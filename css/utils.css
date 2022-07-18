@@ -15,14 +15,13 @@ html {
 
 .link {
     text-decoration: none;
-    filter: grayscale(.5);
-    color: rgb(98, 98, 98);
+    color: var(--clr-white-text);
 }
 
 .link-active {
     text-decoration: none;
     filter: none;
-    color: var(--clr-orange-text);
+    color: var(--clr-orange-text) !important;
 }
 
 .x-big-font {

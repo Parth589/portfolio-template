@@ -4,7 +4,7 @@
 
 ## Description for those who dont know
 
-**_Long time ago, i got a project to make a portfolio website. at that time i don't know the backend so i decided to make it only in frontend. So i followed [this](https://www.figma.com/community/file/1119177547264048236) design and made this static site.Hope you will like it and my storytelling also._**
+**_Long time ago, i got a project to make a portfolio website. at that time i don't know the backend so i decided to make it only in frontend. So i followed [this](https://www.figma.com/community/file/1119177547264048236) design and made this static site.Hope you will like it._**
 
 ## Points to be noted if you want to use this code as a template
 
