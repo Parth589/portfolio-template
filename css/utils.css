@@ -13,6 +13,10 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color: var(--clr-secondary-grey);
+}
+
 .link {
     text-decoration: none;
     color: var(--clr-white-text);

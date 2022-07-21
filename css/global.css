@@ -48,14 +48,24 @@ nav>button {
 
 
 body {
+    position: relative;
+}
+
+body::before {
     background-image: url('../media/mainBG.jpg');
     background-size: cover;
+    background-position: left;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
 }
 
 section {
     padding: 0 100px;
     min-height: 100vh;
-    height: 100vh;
+    height: fit-content;
     position: relative;
 }
 
@@ -308,7 +318,7 @@ skill-list {
 .has-tool-tip>description {
     position: absolute;
     height: max-content;
-    width: 500px;
+    width: min(75vw, 500px);
     background-color: var(--clr-white-text);
     display: none;
     color: var(--clr-orange-text);
