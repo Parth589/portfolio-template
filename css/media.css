@@ -105,6 +105,12 @@
     }
 }
 
+@media screen and (max-width: 660px) {
+    #about {
+        flex-wrap: wrap;
+    }
+}
+
 @media screen and (max-width: 550px) {
 
     #skills {
@@ -120,10 +126,10 @@
 
 @media screen and (max-width: 492px) {
     #about {
-        flex-wrap: wrap;
         padding-top: 50px;
         box-sizing: border-box;
-        height: 115vh;
+        height: 100vh;
+        gap: 0;
     }
 
     profile-picture>img {
@@ -135,11 +141,6 @@
 }
 
 @media screen and (max-width: 465px) {
-
-    #about,
-    #skills {
-        height: 130vh;
-    }
 
     .contact-card {
         width: 90%;

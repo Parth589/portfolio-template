@@ -104,38 +104,39 @@ function setHorizontalScroll(container, leftBtnID, rightBtnID) {
 function getProjectList(username, filterArray) {
     let finalHtml = "";
     fetch(`https://api.github.com/users/${username}/repos`).then(response => {
-        response.json().then(data => {
-            data.forEach(async (element) => {
-                //build the object
-                let obj = {
-                    name: element.name,
-                    stars: element["stargazers_count"],
-                    description: null,
-                    languages: [],
-                    url: element["html_url"]
-                };
-                let is_excluded = false;
-                filterArray.forEach(element => {
-                    if (obj.name === element) {
-                        is_excluded = true;
-                    }
-                });
-                if (is_excluded == true) {
-                    return;
-                }
-                if (element.description === null) {
-                    obj.description = "No description provided by owner.";
-                }
-                else {
-                    obj.description = element.description;
-                }
-
-                await fetch(element["languages_url"]).then(response => {
-                    response.json().then(data => {
-                        for (const key in data) {
-                            obj.languages.push(key);
+        if (response.ok) {
+            response.json().then(data => {
+                data.forEach(async (element) => {
+                    //build the object
+                    let obj = {
+                        name: element.name,
+                        stars: element["stargazers_count"],
+                        description: null,
+                        languages: [],
+                        url: element["html_url"]
+                    };
+                    let is_excluded = false;
+                    filterArray.forEach(element => {
+                        if (obj.name === element) {
+                            is_excluded = true;
                         }
-                        finalHtml = `
+                    });
+                    if (is_excluded == true) {
+                        return;
+                    }
+                    if (element.description === null) {
+                        obj.description = "No description provided by owner.";
+                    }
+                    else {
+                        obj.description = element.description;
+                    }
+
+                    await fetch(element["languages_url"]).then(response => {
+                        response.json().then(data => {
+                            for (const key in data) {
+                                obj.languages.push(key);
+                            }
+                            finalHtml = `
                     <li class="small-font arial project-card ">
                         <a href="${obj.url}" class=" hide-scrollbar" target="_blank">
                             <img src="media/github-logo.svg" alt="github-link" class="filter">
@@ -148,12 +149,18 @@ function getProjectList(username, filterArray) {
                         <span>${obj.stars} Stars</span>
                         <span>${obj.languages}</span>
                     </li>`;
-                        appendHtml("#works>ul", finalHtml);
+                            appendHtml("#works>ul", finalHtml);
 
+                        });
                     });
                 });
             });
-        });
+        }
+        else {
+            let finalHtml = `<h1> Can't fetch the projects from the github server. Error- response not got-username:${username}</h1>`;
+            setHtml("#works>ul", finalHtml);
+
+        }
     });
 }
 function resetContactForm() {
@@ -231,7 +238,7 @@ let start = () => {
             setHref("socialHandles :nth-child(4)", data["instagram-handle"]);
             setSrc("profile-picture>img", data["profile-picture"]);
             setHtml("about", data["about-yourself"]);
-            setHref("#download-cv-btn", data["cv-link"]);
+            setHref("#download-cv-btn>a", data["cv-link"]);
             setHtml("skill-para", data["about-skills"]);
             // set skills with their percentage
             setSkiils(data["skills"]);
@@ -243,9 +250,10 @@ let start = () => {
                 console.log(sendMsgBtn.href);
             }
             if (sendMsgBtn !== null) {
-                sendMsgBtn.addEventListener("click", () => {
+                sendMsgBtn.addEventListener("click", (e) => {
                     let i = validateAndSend();
                     if (i == false) {
+                        e.preventDefault();
                         sendMsgBtn.innerHTML = '<span class="link x-small-font uppercase">Not sent!</span>';
                         setTimeout(() => {
                             sendMsgBtn.innerHTML = '<span class="link x-small-font uppercase">Send message</span>';
